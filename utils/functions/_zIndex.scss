@@ -1,7 +1,18 @@
 /// Z-Index function
+/// @Notes: Z-INDEX INTERVALS:
+/// > 0000–1999: Elements and Components
+/// > 2000–2999: Element and Component Drop Downs
+/// > 3000–3999: Secondary Navigation
+/// > 4000–4999: Header / Footer
+/// > 5000–5999: Primary Navigation
+/// > 6000–6999: Full Screen Features
+/// > 7000–7999: Special Cases
+/// > 8000–8999: Modals / Dialog Windows
+/// 9000–9999: Notifications
 /// @param {string} $list (Array) - The list to find the current z-index in
 /// @param {string} $element (String) - The name of the current element, must be in the $list
 /// @returns {number}
+
 @function zindex($list, $element) {
   $zIndex: index($list, $element);
 
