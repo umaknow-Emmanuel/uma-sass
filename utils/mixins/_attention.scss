@@ -1,0 +1,19 @@
+/// When we give an element some ‘attention’.
+/// @example
+/// a {
+///   font-weight: bold;
+///   text-decoration: none;
+///   color: #c00;
+///
+///   @include attention() {
+///     outline: none;
+///     color: #09f;
+///   }
+/// }
+@mixin attention() {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
