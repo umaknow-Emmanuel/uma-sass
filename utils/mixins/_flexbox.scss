@@ -1,0 +1,16 @@
+/// FlexBox mixin
+/// @link https://medium.com/science-journal/z-index-organization-in-css-5913fd4c25c9
+/// @exemple
+///   .input-wrapper {
+///   @include flex-container($direction: column, $spacing: space-around);
+///   }
+///   Or
+///   .side-by-side {
+///     @include flex-container();
+///   }
+@mixin flex-container($direction: row, $spacing: space-between, $alignment: null) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $spacing;
+  align-items: $alignment;
+}
