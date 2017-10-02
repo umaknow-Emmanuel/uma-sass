@@ -1,2 +1,2 @@
 # Image compression
-- See https://images.guide/ to
+- See https://images.guide/
