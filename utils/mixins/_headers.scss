@@ -1,0 +1,13 @@
+/// Apply styles to all header elements at once.
+/// @example:
+///   @include headers-all {color:red};
+@mixin headers-all {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @content;
+  }
+}

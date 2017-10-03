@@ -1,0 +1,43 @@
+/// Apply styles to all links at once.
+@mixin links-all {
+  a:link,
+  a:visited,
+  a:hover,
+  a:focus,
+  a:active {
+    @content;
+  }
+}
+
+/// Apply styles only to inactive links (unvisited, visited).
+@mixin links-inactive {
+  a:link,
+  a:visited {
+    @content;
+  }
+}
+
+/// Apply styles only to semi-active links (hovered, focused with keyboard).
+@mixin links-semiactive {
+  a:hover,
+  a:focus {
+    @content;
+  }
+}
+
+/// Apply styles only to fully-active links (being activated by clicking or pressing enter).
+@mixin links-fullyactive {
+  a:active {
+    @content;
+  }
+}
+
+/// Apply styles to both active and semi-active links.
+@mixin links-active {
+  a:hover,
+  a:focus,
+  a:active,
+  a.is-active {
+    @content;
+  }
+}
